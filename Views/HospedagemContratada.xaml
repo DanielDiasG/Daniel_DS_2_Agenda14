@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Agenda13.Views.HospedagemContratada"
+             Title="HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="DarkSlateGrey">
+
+<ContentPage.Background>
+    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+        <GradientStop Color="#072246" Offset="0.8" />
+        <GradientStop Color="DarkSlateGrey" Offset="0.4" />
+        <GradientStop Color="Teal" Offset="0.2" />
+
+
+    </LinearGradientBrush>
+</ContentPage.Background>
+    
+<ContentPage.Resources>
+    <Style TargetType="Label">
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="TekturRegular" />
+    </Style>
+   
+    <Style TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#FFC333" />
+        <Setter Property="FontFamily" Value="TekturRegular" />
+    </Style>
+</ContentPage.Resources>
+    <Border BackgroundColor="#072246" Margin="20,120" StrokeShape="RoundRectangle 20">
+        <VerticalStackLayout  VerticalOptions="CenterAndExpand">
+        
+            <Border StrokeShape="RoundRectangle 20"
+                  BackgroundColor="#FFCC66"
+                   Margin="10">
+                 <Label  Text="Suíte Super Luxo"
+                          TextColor="#072246" 
+                         FontFamily="TekturRegular"
+                          FontSize="30"
+                             HorizontalTextAlignment="Center"
+                 />
+             </Border>
+
+            <Frame Margin="10"  BackgroundColor="#003366">
+                <HorizontalStackLayout>
+                    <HorizontalStackLayout Padding="45, 0" BackgroundColor="#287386">
+                           <Label Text="Adultos: "/>
+                           <Label Text="2" TextColor="Gold"  Margin="10"/>
+                      </HorizontalStackLayout>
+
+                    <HorizontalStackLayout HorizontalOptions="Center"  BackgroundColor="#287386"  >
+                             <Label Text="Criança: "/>
+                        <Label Text="1" TextColor="Gold" Margin="10" Padding="0,0,30,0"/>
+                      </HorizontalStackLayout >
+               </HorizontalStackLayout>
+            </Frame>
+            <Frame Margin="10" BackgroundColor="#003366"  >
+               <Grid ColumnDefinitions="*, *, *" RowDefinitions="Auto, Auto"  >
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in: " Padding="10,0"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Check-out: " Padding="10,0"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:  " Padding="15,0"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="27/05/2026 "  />
+                    <Label Grid.Row="1" Grid.Column="1" Text="30/05/2026 " Margin="4,0" />
+                    <Label Grid.Row="1" Grid.Column="2" Text="3" Margin="35,0"/>
+
+               </Grid>
+            </Frame>
+
+            <Frame Margin="10" BackgroundColor="#003366" >
+               <HorizontalStackLayout >
+                <Label Text="Valor Total: " Margin="50,0"/>
+                <Label Text="R$ 750,00"/>
+
+               </HorizontalStackLayout>
+            </Frame>
+
+             <Button Text="Voltar" Clicked="Button_Clicked" Padding="50,5" HorizontalOptions="Center"/>
+     
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>

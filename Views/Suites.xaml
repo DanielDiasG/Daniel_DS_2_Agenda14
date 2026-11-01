@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Agenda13.Views.Suites"
+             Title="Suites">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="TekturBold" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="BackgroundColor" Value="Maroon" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="PaleGoldenrod" />
+
+
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="#072246" Offset="0.8" />
+            <GradientStop Color="DarkSlateGrey" Offset="0.4" />
+            <GradientStop Color="Teal" Offset="0.2" />
+
+
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout  Margin="10">
+        
+        <Label Text="Suíte Super Luxo" />
+       
+
+        <Border StrokeShape="RoundRectangle 10 " BackgroundColor="LightBlue" >
+            <Image Source="suite_super_luxo.png" Aspect="AspectFill" HeightRequest="150"  Margin="10"/>
+        </Border>
+
+        <Label Text="Suíte Luxo" />
+        <Border StrokeShape="RoundRectangle 10 " BackgroundColor="LightBlue" >
+            <Image Source="suite_luxo.png" Aspect="AspectFill" HeightRequest="150"  Margin="10"/>
+        </Border>
+        <Label Text="Suíte Single " />
+
+        <Border StrokeShape="RoundRectangle 10 " BackgroundColor="LightBlue" >
+            <Image Source="suite_single.png" Aspect="AspectFill" HeightRequest="150"  Margin="10" />
+        </Border>
+      
+    </VerticalStackLayout>
+</ContentPage>
